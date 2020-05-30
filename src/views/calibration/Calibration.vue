@@ -1,5 +1,7 @@
 <template>
-  <h1>Info before routing</h1>
+    <div>
+    <h1>Calibration</h1>
+  </div>
 </template>
 
 <script>

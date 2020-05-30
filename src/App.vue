@@ -1,14 +1,30 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/parameters">Parameters</router-link> |
+      <router-link to="/systems">Systems</router-link> |
+      <router-link to="/calibration">Calibration</router-link> |
+      <router-link to="/tools">Tools</router-link>
     </div>
+    <param-list/>
     <router-view/>
   </div>
 </template>
 
+<script>
+import './assets/css/tailwind.css'
+import ParamList from './views/stickies/ParamList.vue'
+
+export default {
+  components:{
+    ParamList,
+  }
+  
+}
+</script>
+
 <style lang="scss">
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,7 +41,7 @@
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: blue;
     }
   }
 }

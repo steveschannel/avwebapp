@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
+import Parameters from '../views/parameters/Parameters.vue'
+import Systems from '../views/systems/Systems.vue'
+import Calibration from '../views/calibration/Calibration.vue'
+import Tools from '../views/tools/Tools.vue'
+
 
 Vue.use(VueRouter)
 
@@ -11,17 +16,29 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/parameters',
+    name: 'Parameters',
+    component: Parameters
+  },
+  {
+    path: '/systems',
+    name: 'Systems',
+    component: Systems
+  },
+  {
+    path: '/calibration',
+    name: 'Calibration',
+    component: Calibration
+  },
+  {
+    path: '/tools',
+    name: 'Tools',
+    component: Tools
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
