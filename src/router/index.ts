@@ -3,7 +3,6 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Parameters from '../views/parameters/Parameters.vue'
 import Systems from '../views/systems/Systems.vue'
-import Calibration from '../views/calibration/Calibration.vue'
 import Tools from '../views/tools/Tools.vue'
 
 
@@ -24,11 +23,6 @@ Vue.use(VueRouter)
     path: '/systems',
     name: 'Systems',
     component: Systems
-  },
-  {
-    path: '/calibration',
-    name: 'Calibration',
-    component: Calibration
   },
   {
     path: '/tools',

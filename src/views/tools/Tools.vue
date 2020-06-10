@@ -1,19 +1,28 @@
 <template>
-<div class="flex flex-wrap">
-  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-4 bg-gray-500">Chlorine Weight - Bottles</div>
-  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-4 bg-gray-400">Reservoir Volume</div>
-  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-4 bg-gray-500">Disinfection</div>
-  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-4 bg-gray-400">Drip Rate Estimation</div>
-  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-4 bg-gray-500">Solution Concentration</div>
+<div class="mx-8 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <bottle class="shadow-lg border border-gray-400 rounded-lg"/>
+    <volume class="shadow-lg border border-gray-400 rounded-lg"/>
+    <disinfection class="shadow-lg border border-gray-400 rounded-lg"/>
+    <drip class="shadow-lg border border-gray-400 rounded-lg"/>
+    <concentration class="shadow-lg border border-gray-400 rounded-lg"/>
 </div>
 </template>
 
 <script>
-export default {
+import bottle from './bottle.vue'
+import volume from './volume.vue'
+import disinfection from './disinfection.vue'
+import drip from './drip.vue'
+import concentration from './concentration.vue'
 
-}
+  export default{
+    components:{
+      bottle,
+      volume,
+      disinfection,
+      drip,
+      concentration,
+    }
+    
+  }
 </script>
-
-<style>
-
-</style>

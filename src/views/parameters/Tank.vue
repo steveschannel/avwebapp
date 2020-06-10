@@ -5,18 +5,28 @@
           <div class="space-y-4 ">
           <div>
           <span class="flex text-left"> Tank Capacity </span>
-          <input class="text-center border border-black w-full" type="number"/>
+          <input class="text-center border border-black w-full" type="number" v-model="tank"/>
           </div>
           </div>
       </div>
       <button class="p-2 border border-black m-2 rounded"> Formula </button>
       <button class="p-2 border border-black m-2 rounded"> Guide </button>
-      <button class="p-2 border border-black m-2 rounded"> Calculate </button>
+      <button class="p-2 border border-black m-2 rounded" @click="setTank"> Calculate </button>
     </div>
 </template>
 
 <script>
 export default {
+  data: function() {
+    return {
+      tank:null,
+    }
+  },
+  methods:{
+    setTank() {
+      this.$store.state.tank = parseInt(this.tank);
+    }
+  }
 
 }
 </script>

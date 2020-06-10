@@ -3,7 +3,6 @@
     <div id="nav">
       <router-link to="/parameters">Parameters</router-link> |
       <router-link to="/systems">Systems</router-link> |
-      <router-link to="/calibration">Calibration</router-link> |
       <router-link to="/tools">Tools</router-link>
     </div>
     <param-list/>
