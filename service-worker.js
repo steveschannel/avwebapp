@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/avwebapp/precache-manifest.b2d81bc5b2e8b702cac5b8d444a993d6.js"
+  "/avwebapp/precache-manifest.7ad8860a6eb0075bd6527b370f1ba1c3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "avwebapp"});
