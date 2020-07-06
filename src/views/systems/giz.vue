@@ -1,10 +1,9 @@
 <template>
   <div class="bg-white items-center justify-center p-8"> 
-    <heading class="text-2xl font-black">
+    <heading>
       GIZ
-      <br>
     </heading>
-    <div>
+    <div class="my-4">
       <h1> Chlorine Weight </h1>
       <span> {{ Weight.weight }} {{Weight.units}}  </span>
       <span v-if="!isBleach"> or {{ Weight.weight*1000 }} grams <br> <br></span>
@@ -18,7 +17,6 @@
   </div>
 
   <div v-if="calibrateOn==true">
-
     
     <br>
     <hr>
@@ -67,7 +65,7 @@
   
   <template v-if="editOn && calibrateOn !== true" class="m-2">
     <div>
-    <heading class="font-light"> EDIT PARAMETERS  </heading>
+    <heading> EDIT PARAMETERS  </heading>
       <div class="space-y-1 mb-4">
           <div>
             <span class="flex text-left"> Inflow Rate </span> 

@@ -24,7 +24,7 @@ export default {
   },
   methods:{
     setTank() {
-      this.$store.state.tank = parseInt(this.tank);
+      this.$store.state.tank.value = parseInt(this.tank);
     }
   }
 

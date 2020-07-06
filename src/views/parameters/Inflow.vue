@@ -39,10 +39,25 @@ export default {
         }
 
     },
+
+    computed: {
+        inflowRate(){
+            const rec = parseInt(this.recipient);
+            const t1 = parseInt(this.t1);
+            const t2 = parseInt(this.t2);
+            const t3 = parseInt(this.t3)
+
+            const result = rec / ((t1 + t2 + t3)/3);
+
+            return result.toFixed(2);
+        }
+    },
     methods:{
         calculate() {
-            const solution = parseInt(this.recipient)/((parseInt(this.t1) + parseInt(this.t2) + parseInt(this.t3))/3)
-            this.$store.state.inflow =  solution.toFixed(2)
+            const inf = this.inflowRate;
+
+            this.$store.state.inflow.value =  inf;
+            this.$store.state.inflow.check = true;
         }
     }
 

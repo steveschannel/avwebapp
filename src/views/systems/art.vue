@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white items-center justify-center p-8"> 
-    <heading class="text-2xl font-black">
+    <heading>
       Artesanal System
       <br>
     </heading>

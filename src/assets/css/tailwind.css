@@ -1,8 +1,11 @@
 @tailwind base;
 
 h1 {
-    @apply text-2xl;
+    @apply font-bold;
   }
 
+heading {
+  @apply text-2xl font-black;
+}
 @tailwind components;
 @tailwind utilities;

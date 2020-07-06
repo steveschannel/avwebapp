@@ -5,13 +5,32 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    inflow: null,
-    drip: null,
-    per: null,
-    dos: null,
-    tank: null,
 
-    isBleach: false,
+      inflow: {
+        value: null,
+        check: false,
+      },
+
+    drip: {
+      value: null,
+      check: false,
+    },
+
+    per: {
+      value: null,
+      check: false,
+
+      isBleach: false,
+    },
+    
+    dos: {
+      value: null,
+      check: false,
+    },
+    tank: {
+      value: null,
+      check: false,
+    },    
 
   },
   mutations: {
